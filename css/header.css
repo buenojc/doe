@@ -1,18 +1,29 @@
 header > .logo {
-  margin: 50px 0;
-  max-width: 150px;
+  margin: 30px 0 80px;
+  width: 100px;
+}
+
+header > h1 {
+  margin-bottom: 30px;
 }
 
 header > p {
-  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 18px;
+}
+
+header > p:last-of-type {
+  margin-bottom: 0;
 }
 
 header > button {
   margin-top: 40px;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  font-size: 15px;
   border-style: solid;
+  border-width: 1px;
+  border-color: #db1f42;
   cursor: pointer;
   background-color: #ed2f48;
   color: white;
