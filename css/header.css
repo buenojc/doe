@@ -1,0 +1,19 @@
+header > .logo {
+  margin: 50px 0;
+  max-width: 150px;
+}
+
+header > p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+header > button {
+  margin-top: 40px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-style: solid;
+  cursor: pointer;
+  background-color: #ed2f48;
+  color: white;
+}
