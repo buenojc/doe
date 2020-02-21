@@ -6,12 +6,13 @@
 }
 
 body {
-  background-color: #f9f9f9;
+  background-color: #fef7fe;
   font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
   width: 80%;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
