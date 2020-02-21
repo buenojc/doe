@@ -1,0 +1,39 @@
+.last-donors {
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 0;
+}
+
+.last-donors > .donor {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.last-donors .drop {
+  background-color: #fcebf3;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(-45deg);
+  text-align: center;
+  position: relative;
+}
+
+.last-donors .blood {
+  display: block;
+  transform: rotate(45deg);
+  font-weight: bold;
+  color: #db1f42;
+  text-align: center;
+  position: absolute;
+  right: 25%;
+  top: 25%;
+  font-size: 16px;
+}
+
+.last-donors .name {
+  margin-top: 20px;
+}
