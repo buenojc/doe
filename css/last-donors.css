@@ -5,6 +5,17 @@
   gap: 10px 0;
 }
 
+.last-donors > .title {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.last-donors > .title > .highlight {
+  color: #db1f42;
+}
+
 .last-donors > .donor {
   padding: 15px 0;
   text-align: center;
