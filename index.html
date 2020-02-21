@@ -6,6 +6,9 @@
     <title>Doe Sangue, Doe Vida!</title>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/form-wrapper.css" />
+    <link rel="stylesheet" href="css/last-donors.css" />
+    <link rel="stylesheet" href="css/page-footer.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -20,19 +23,50 @@
 
       <main>
         <div class="form-wrapper">
+          <p class="call">Entre na lista de <br />doadores</p>
           <form action="/" class="form">
-            <input type="text" id="name" placeholder="Nome" />
-            <input type="email" id="email" placeholder="hermione@hogwarts.uk" />
+            <input type="text" class="field" id="name" placeholder="Nome" />
+            <input type="email" class="field" id="email" placeholder="email" />
             <input
               type="text"
-              name=""
+              class="field"
               id="blood-type"
               placeholder="Tipo Sanguíneo"
             />
-            <button type="submit" class="btnsubmit">Quero Ajudar</button>
+            <button type="submit" class="btn">Quero Ajudar</button>
           </form>
         </div>
+
+        <section class="last-donors">
+          <div class="donor">
+            <div class="drop">
+              <span class="blood">AB+</span>
+            </div>
+            <div class="name">Michael Scott</div>
+          </div>
+          <div class="donor">
+            <div class="drop">
+              <span class="blood">AB+</span>
+            </div>
+            <div class="name">Michael Scott</div>
+          </div>
+          <div class="donor">
+            <div class="drop">
+              <span class="blood">AB+</span>
+            </div>
+            <div class="name">Michael Scott</div>
+          </div>
+          <div class="donor">
+            <div class="drop">
+              <span class="blood">O+</span>
+            </div>
+            <div class="name">Michael Scott</div>
+          </div>
+        </section>
       </main>
+      <footer class="page-footer">
+        <p>Com 💜 Rocketseat</p>
+      </footer>
     </div>
   </body>
 </html>
