@@ -8,6 +8,7 @@
 body {
   background-color: #fef7fe;
   font-family: "Roboto", sans-serif;
+  overflow-y: scroll;
 }
 
 .wrapper {
@@ -15,4 +16,7 @@ body {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
 }
