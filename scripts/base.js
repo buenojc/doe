@@ -2,5 +2,5 @@ const $btn = document.querySelector(".cta");
 const $form = document.querySelector(".form-wrapper");
 
 $btn.addEventListener("click", () => {
-  $form.classList.toggle("-active");
+  $form.classList.toggle("-hide");
 });

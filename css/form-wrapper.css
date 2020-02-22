@@ -1,27 +1,19 @@
 .form-wrapper {
   margin-top: 30px;
+  display: grid;
   grid-template-columns: 60% 40%;
   background-color: #ed2f48;
   border-radius: 8px;
   align-items: center;
   padding: 20px 60px 20px 0;
-  display: none;
+  transition: all 300ms;
 }
 
-.form-wrapper.-active {
-  display: grid;
-  animation: move-form 500ms ease forwards;
-}
-
-@keyframes move-form {
-  from {
-    margin-top: 10px;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    margin-top: 30px;
-  }
+.form-wrapper.-hide {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  margin-top: -70px;
 }
 
 .form-wrapper > .call {
