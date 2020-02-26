@@ -1,7 +1,14 @@
 const express = require("express");
+const nunjucks = require("nunjucks");
 const server = express();
 
-server.use(express.static("./"));
+server.set("view engine", "njk");
+server.use(express.static("./public"));
+
+nunjucks.configure("./views", {
+  express: server,
+  noCache: true
+});
 
 server.get("/", function(req, res) {
   res.render("index");
