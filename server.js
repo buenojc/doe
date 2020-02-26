@@ -1,8 +1,10 @@
 const express = require("express");
 const server = express();
 
+server.use(express.static("./"));
+
 server.get("/", function(req, res) {
-  res.send("Ainda funciona!");
+  res.render("index");
 });
 
 server.listen(5000, function() {

@@ -1,0 +1,53 @@
+.form-wrapper {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background-color: #ed2f48;
+  border-radius: 8px;
+  align-items: center;
+  padding: 20px 60px 20px 0;
+  transition: all 300ms;
+}
+
+.form-wrapper.-hide {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  margin-top: -70px;
+}
+
+.form-wrapper > .call {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+.form-wrapper .field {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #ff5168;
+  background-color: #ed2f48;
+  color: white;
+  box-sizing: border-box;
+}
+
+.form-wrapper .field::placeholder {
+  color: #fd91a0;
+}
+
+.form-wrapper .btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border-style: solid;
+  font-weight: bold;
+  background-color: #fef7fe;
+  border-color: #db1f42;
+  cursor: pointer;
+}
