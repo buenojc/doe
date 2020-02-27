@@ -2,6 +2,15 @@ const express = require("express");
 const nunjucks = require("nunjucks");
 const server = express();
 
+const Pool = require("pg").Pool;
+const db = new Pool({
+  user: "postgres",
+  password: "0000",
+  host: "localhost",
+  port: 5432,
+  database: "doe"
+});
+
 server.set("view engine", "njk");
 server.use(express.static("./public"));
 server.use(express.urlencoded({ extended: true }));
@@ -12,31 +21,14 @@ nunjucks.configure("./views", {
   noCache: true
 });
 
-const donors = [
-  {
-    name: "Julio Cesar",
-    email: "buenojc@outlook.com",
-    blood: "A+"
-  },
-  {
-    name: "Julio Cesar",
-    email: "buenojc@outlook.com",
-    blood: "A+"
-  },
-  {
-    name: "Julio Cesar",
-    email: "buenojc@outlook.com",
-    blood: "A+"
-  },
-  {
-    name: "Julio Cesar",
-    email: "buenojc@outlook.com",
-    blood: "A+"
-  }
-];
-
 server.get("/", function(req, res) {
-  return res.render("index", { donors });
+  db.query("SELECT * FROM donors", function(err, result) {
+    if (err) {
+      return res.send("Erro no banco de dados");
+    }
+    const donors = result.rows;
+    return res.render("index", { donors });
+  });
 });
 
 server.post("/", function(req, res) {
@@ -45,7 +37,16 @@ server.post("/", function(req, res) {
     email: req.body.email,
     blood: req.body.blood
   };
-  donors.push(donor);
+
+  if (donor.name == "" || donor.email == "" || donor.blood == "") {
+    return res.send("É necessário que todos os campos sejam preenchidos");
+  }
+
+  const query = `INSERT INTO donors ("name", "email", "blood")
+  VALUES ($1, $2, $3)`;
+
+  db.query(query, [donor.name, donor.email, donor.blood]);
+
   return res.redirect("/");
 });
 
