@@ -52,6 +52,10 @@ server.post('/', async function (req, res) {
   return res.redirect('/');
 });
 
-server.listen(5000, function () {
-  console.log('Server is running');
+let port = process.env.PORT;
+if (port == null || port == '') {
+  port = 5000;
+}
+server.listen(port, function () {
+  console.log(`Server is running at ${port}`);
 });
